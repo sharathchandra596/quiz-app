@@ -49,25 +49,25 @@ const option_b = document.getElementById("text_option_b");
 const option_c = document.getElementById("text_option_c");
 const option_d = document.getElementById("text_option_d");
 const answerElement = document.querySelectorAll(".answer");
-console.log(option_a);
-console.log(option_b);  
-console.log(option_c);
-console.log(option_d);
-console.log(option_a.textContent);
-console.log(option_b.textContent);
-console.log(option_c.textContent);
-console.log(option_d.textContent);
+// console.log(option_a);
+// console.log(option_b);  
+// console.log(option_c);
+// console.log(option_d);
+// console.log(option_a.textContent);
+// console.log(option_b.textContent);
+// console.log(option_c.textContent);
+// console.log(option_d.textContent);
 
 const submit = document.getElementById("submit");
 
 let currentQuestion = 0;
 let score = 0;
 
-console.log(quiz[currentQuestion].question);
-console.log(quiz[currentQuestion].ans1text);
-console.log(quiz[currentQuestion].ans2text);
-console.log(quiz[currentQuestion].ans3text);
-console.log(quiz[currentQuestion].ans4text);
+// console.log(quiz[currentQuestion].question);
+// console.log(quiz[currentQuestion].ans1text);
+// console.log(quiz[currentQuestion].ans2text);
+// console.log(quiz[currentQuestion].ans3text);
+// console.log(quiz[currentQuestion].ans4text);
 
 question.textContent = quiz[currentQuestion].question;
 option_a.textContent = quiz[currentQuestion].ans1text;
@@ -85,6 +85,11 @@ submit.addEventListener("click", () => {
     }else{
         if( checkedAns.nextElementSibling.textContent === quiz[currentQuestion].answer){
             score++;
+             
+        }
+        else
+        {
+          alert(`${quiz[currentQuestion].answer} this is correct answer`)
         }
 
         currentQuestion++;
